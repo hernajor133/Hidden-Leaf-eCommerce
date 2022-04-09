@@ -16,3 +16,13 @@ Tag.init(
       type: DataTypes.STRING
     },
   },
+  {
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'tag',
+  }
+);
+
+module.exports = Tag;

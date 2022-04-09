@@ -18,3 +18,15 @@ Product.belongsToMany(Tag, {
   }
 });
 
+Tag.belongsToMany(Product, {
+  through: {
+    model: ProductTag,
+  }
+})
+
+module.exports = {
+  Product,
+  Category,
+  Tag,
+  ProductTag,
+};

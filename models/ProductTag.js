@@ -20,4 +20,22 @@ ProductTag.init(
         unique: false
       }
     },
- 
+    tag_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'tag',
+        key: 'id',
+        unique: false
+      }
+    },
+  },
+  {
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'product_tag',
+  }
+);
+
+module.exports = ProductTag;
